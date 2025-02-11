@@ -36,7 +36,7 @@ mvn install
 Move the generated JAR file to a shared folder for easy access:
 
 ```bash
-mv target/*.jar shared-folder/input/code/
+mv target/*.jar shared-folder/input/data/
 ```
 
 ### 4. **Copy JAR to Docker Container**
@@ -44,7 +44,7 @@ mv target/*.jar shared-folder/input/code/
 Copy the JAR file to the Hadoop ResourceManager container:
 
 ```bash
-docker cp shared-folder/input/code/<your-jar-file>.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
+docker cp shared-folder/input/data/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
 ```
 
 ### 5. **Move Dataset to Docker Container**
